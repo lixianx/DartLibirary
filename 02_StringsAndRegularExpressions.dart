@@ -37,9 +37,30 @@ void main() {
   //判断字符串是否为空
   print(''.isEmpty);
 
-  //字符串替换,事实上原字符串并没有发生改变， 
+  //字符串替换,事实上原字符串并没有发生改变，
   var s = 'this is a string';
   var h = s.replaceAll(RegExp('string'), 'Dart');
   print(h);
   print(s);
+
+  ///-----------------------Build a String-----------------------------
+  print('\n');
+  var sb = StringBuffer();
+  sb
+    ..write('Use a StringBuffer for ')
+    ..writeAll(['efficient', 'string', 'creation'], ' ')
+    ..write('.');
+
+  var fullString = sb.toString();
+  print(fullString);
+
+  //--------------------------正则表达式--------------------------
+  print('\n');
+  var numbers = RegExp(r'\d+'); //r确保\d不会被转义，numbers为一个可以匹配一个或多个数字的正则表达式对象
+  var NotDigital = 'This is a string not digital';
+  var digitalString = 'My phone number is 10086, my QQ is 2641854521';
+  print(NotDigital.contains(numbers));
+  print(digitalString.contains(numbers));
+  var raplace = digitalString.replaceAll(numbers, 'X');
+  print(raplace);
 }
