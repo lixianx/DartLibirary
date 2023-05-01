@@ -63,4 +63,28 @@ void main() {
   print(digitalString.contains(numbers));
   var raplace = digitalString.replaceAll(numbers, 'X');
   print(raplace);
+
+  //----------------------------List------------------------------
+  print('\n');
+  //创建一个空的字符串列表
+  var grains = <String>[];
+  print(grains);
+  //初始化一个字符串列表
+  var fruits = ['apples', 'oranges'];
+  print(fruits);
+  //添加一个元素
+  fruits.add('banana');
+  print(fruits);
+  //添加多个元素
+  fruits.addAll(['pineaple', 'watermelon']);
+  print(fruits);
+  //获取列表长度
+  
+  print(fruits.length);
+  //indexOf返回下标
+  var indexApple = fruits.indexOf('apples');
+  fruits.removeAt(indexApple);
+  print(fruits);
+  print(indexApple);
+  print(indexApple.runtimeType);
 }
