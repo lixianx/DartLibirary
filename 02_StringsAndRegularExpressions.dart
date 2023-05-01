@@ -79,7 +79,7 @@ void main() {
   fruits.addAll(['pineaple', 'watermelon']);
   print(fruits);
   //获取列表长度
-  
+
   print(fruits.length);
   //indexOf返回下标
   var indexApple = fruits.indexOf('apples');
@@ -87,4 +87,14 @@ void main() {
   print(fruits);
   print(indexApple);
   print(indexApple.runtimeType);
+  //清空列表
+  fruits.clear();
+  print(fruits);
+  //
+  var vegetables = List.filled(99, 'broccoli');
+  print(vegetables);
+  //排序
+  fruits = ['bananas', 'apples', 'oranges'];
+  fruits.sort();
+  print(fruits);
 }
