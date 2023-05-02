@@ -4,7 +4,6 @@
 Future<void> printOrderMessage() async {
   print('Awaiting user order...');
   var order = await fetchUserOrder();
-  2
   print('Your order is: $order');
 }
 
