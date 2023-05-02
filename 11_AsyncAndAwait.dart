@@ -2,8 +2,9 @@
 //要定义异步函数，需要在函数体前添加async
 //await关键字用于异步函数
 Future<void> printOrderMessage() async {
-  var order = await fetchUserOrder();
   print('Awaiting user order...');
+  var order = await fetchUserOrder();
+  2
   print('Your order is: $order');
 }
 
