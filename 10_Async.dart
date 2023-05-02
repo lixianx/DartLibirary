@@ -34,7 +34,13 @@ Future<void> fetchUserOrder2() {
   return Future.delayed(const Duration(seconds: 2), () => print('Large Latte'));
 }
 
-void main() async {
-  print(fetchUserOrder2());
+Future<void> fetchUserOrder3() {
+  return Future.delayed(const Duration(seconds: 2),
+      () => throw Exception('logout failed: user ID is invalid'));
+}
+
+void main() {
+  // print(fetchUserOrder2());
+  print(fetchUserOrder3());
   print('Fetching user order...');
 }
