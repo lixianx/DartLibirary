@@ -28,4 +28,8 @@ void main() {
   //不指定片段
   var httpUri = Uri.http('example.org', '/foo/bar', {'lang': 'dart'});
   var httpsUri = Uri.https('example.org', '/foo/bar', {'lang': 'dart'});
+
+  String encodeMap(Map<String, String> data) =>
+      data.entries.map((e) => '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}').join('&');
+  print(encodeMap({'lala': 'haha'}));
 }
